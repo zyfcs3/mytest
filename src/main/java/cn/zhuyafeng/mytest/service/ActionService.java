@@ -12,4 +12,8 @@ public interface ActionService {
 
     List<Person> queryAllPerson();
 
+    Person queryById(int id);
+
+    boolean updatePerson(Person person);
+
 }

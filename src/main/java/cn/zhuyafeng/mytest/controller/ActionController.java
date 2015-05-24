@@ -44,5 +44,20 @@ public class ActionController {
         return modelAndView;
         
     }
+    @RequestMapping("queryById")
+    public ModelAndView  queryById(int id){
+        Person person = actionService.queryById(id);
+        ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("person", person);
+        return modelAndView;
+        
+    }
+    @RequestMapping("updatePerson")
+    public ModelAndView updatePerson(Person person){
+        boolean flag = actionService.updatePerson(person);
+        ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("sucess", flag);
+        return modelAndView;
+    }
     
 }

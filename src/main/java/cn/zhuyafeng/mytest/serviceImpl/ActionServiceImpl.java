@@ -30,4 +30,14 @@ public class ActionServiceImpl implements ActionService{
         return persons;
     }
 
+    public Person queryById(int id) {
+        Person person = iAction.queryById(id);
+        return person;
+    }
+
+    public boolean updatePerson(Person person) {
+        
+        return iAction.updatePerson(person);
+    }
+
 }

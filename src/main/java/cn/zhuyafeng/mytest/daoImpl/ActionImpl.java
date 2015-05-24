@@ -40,8 +40,9 @@ public class ActionImpl extends SqlMapClientDaoSupport implements IAction {
     }  
   
     public Person queryById(int id) {  
+        List<Person> persons = getSqlMapClientTemplate().queryForList("queryById", id);
        
-    return null;  
+    return persons.get(0);  
 }  
   
 
