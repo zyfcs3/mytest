@@ -2,6 +2,7 @@ package cn.zhuyafeng.mytest.daoImpl;
 import java.util.List;
 
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
+import org.springframework.stereotype.Service;
 
 import cn.zhuyafeng.mytest.dao.IAction;
 import cn.zhuyafeng.mytest.domain.Person;

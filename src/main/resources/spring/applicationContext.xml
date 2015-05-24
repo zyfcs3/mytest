@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>  
 <beans xmlns="http://www.springframework.org/schema/beans"  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">  
   
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">  
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />  
@@ -9,10 +16,9 @@
         <property name="username" value="root" />  
         <property name="password" value="kaiqimysql0." />  
     </bean>  
-  
     <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">  
         <property name="configLocation">  <!-- name 为configLocation或s  不可为其他 -->  
-            <value>/spring/SqlMapConfig.xml</value> <!-- 不区分大小写，路径前可加'/' -->  
+            <value>classpath:SqlMapConfig.xml</value> <!-- 不区分大小写，路径前可加'/' -->  
         </property>  
           
         <!-- dataSource不是必需 -->  

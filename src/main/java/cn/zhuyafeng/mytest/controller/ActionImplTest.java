@@ -20,7 +20,7 @@ public class ActionImplTest {
     @Test  
     public void testInsertPerson(){  
         ActionImpl s = (ActionImpl)applicationContext.getBean("personDAO");  
-        s.insertPerson(new Person(1,"zhangsan",2));  
+        s.insertPerson(new Person(11,"zhangsan",2));  
     }  
       
     //删除操作  
